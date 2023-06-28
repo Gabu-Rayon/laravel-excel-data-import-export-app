@@ -25,4 +25,7 @@ class UserController extends Controller
 
         return redirect()->back();
     }
+    public function export(){
+        
+    }
 }

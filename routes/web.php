@@ -15,4 +15,5 @@ use App\Http\Controllers\UserController;
 */
 
 Route::get('/', [UserController::class,'index']);
-Route::post('user-import', [UserController::class,'import'])->name('user.import');
+Route::post('/user-import', [UserController::class,'import'])->name('user.import');
+Route::post('/user-export', [UserController::class,'export'])->name('user.export');
