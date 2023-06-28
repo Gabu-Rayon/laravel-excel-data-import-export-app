@@ -10,7 +10,7 @@ use Maatwebsite\Excel\Concerns\WithHeadingRow;
 class UserImport implements ToModel,WithHeadingRow
 {
     /**
-    * @param array $row
+    * @param array $row to import data from excel
     *
     * @return \Illuminate\Database\Eloquent\Model|null
     */
