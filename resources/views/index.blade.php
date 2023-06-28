@@ -17,15 +17,24 @@
                     Laravel Import Excel Data
                 </div>
                 <div class="card-body">
-                   <table class="table table-striped">
-                     <thead class="thead-dark">
-                        <tr>
-                            <th> ID</th>
-                            <th> Name</th>
-                            <th>Email</th>
+                    <div class="col-md-5">
+                        <form action="{{ route('user.import') }}" method="POST" entype="multipart/form-data">
+                            @csrf
+                            <input type="file" class="form-control" name="file">
+                            <span><br></span>
+                            <button type="submit" cl class="btn btn-primary">Import A file</button>
+                        </form>
+                    </div>
+                    <hr >
+                    <table class="table table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th> ID</th>
+                                <th> Name</th>
+                                <th>Email</th>
 
-                        </tr>
-                    </thead>
+                            </tr>
+                        </thead>
                         @foreach ($users as $user)
                             <tr>
                                 <th>{{ $user->id }}</th>

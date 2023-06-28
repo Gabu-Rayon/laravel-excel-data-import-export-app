@@ -15,4 +15,4 @@ use App\Http\Controllers\UserController;
 */
 
 Route::get('/', [UserController::class,'index']);
-Route::post('import', [UserController::class,'import']);
+Route::post('user-import', [UserController::class,'import'])->name('user.import');
