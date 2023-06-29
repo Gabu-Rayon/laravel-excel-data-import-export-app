@@ -13,7 +13,10 @@ Step 1: Installing fresh new Laravel 10.14.x Application
 
 
 composer global require laravel/installer 
+
+
 laravel new example-app
+
 
 Step 2: Creating Database and .env Configuration
 DB_CONNECTION=mysql
@@ -29,8 +32,14 @@ composer require psr/simple-cache:^1.0 maatwebsite/excel
 
 Step 4: Creating Dummy Records
 
------> run this first   php artisan migrate
-       php artisan tinker then 
+-----> run this first  
+
+       php artisan migrate
+
+       
+       php artisan tinker 
+
+       
        User::factory()->count(10)->create()
 
 Step 5: Creating Import Class
@@ -52,6 +61,7 @@ Step 9: Creating Blade File
   users.blade.php
 
 Step 10: Testing
+
        php artisan serve
 
 Step 11: Conclusion
