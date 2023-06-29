@@ -12,13 +12,21 @@
 Step 1: Installing fresh new Laravel 10.14.x Application
 
 
+
+
 composer global require laravel/installer 
+
+
 
 
 laravel new example-app
 
 
 Step 2: Creating Database and .env Configuration
+
+
+
+
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
@@ -26,9 +34,16 @@ DB_DATABASE=example-app
 DB_USERNAME=root
 DB_PASSWORD=
 
+
+
 Step 3: Installing maatwebsite/excel Package
 
+
+
+
 composer require psr/simple-cache:^1.0 maatwebsite/excel
+
+
 
 Step 4: Creating Dummy Records
 
