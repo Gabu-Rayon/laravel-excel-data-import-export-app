@@ -9,28 +9,39 @@
 
 ## About My  Laravel  10.14.x Excel Data Import Export 
 
-Step 1: Installing fresh new Laravel 10.14.x Application
+Step 1: Installing a fresh new Laravel 10.14.x Application
 
+         composer global require laravel/installer 
+         laravel new example-app
 
-composer global require laravel/installer 
-laravel new example-app
 
 Step 2: Creating Database and .env Configuration
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=example-app
-DB_USERNAME=root
-DB_PASSWORD=
+
+           DB_CONNECTION=mysql
+           DB_HOST=127.0.0.1
+           DB_PORT=3306
+           DB_DATABASE=example-app
+           DB_USERNAME=root
+           DB_PASSWORD=
+
+
 
 Step 3: Installing maatwebsite/excel Package
 
-composer require psr/simple-cache:^1.0 maatwebsite/excel
+        composer require psr/simple-cache:^1.0 maatwebsite/excel
+
+
 
 Step 4: Creating Dummy Records
 
------> run this first   php artisan migrate
-       php artisan tinker then 
+-----> run this first  
+
+       php artisan migrate
+
+       
+       php artisan tinker 
+
+       
        User::factory()->count(10)->create()
 
 Step 5: Creating Import Class
@@ -49,9 +60,10 @@ Step 8: Creating Routes
 
 Step 9: Creating Blade File
 
-  users.blade.php
+     users.blade.php
 
 Step 10: Testing
+
        php artisan serve
 
 Step 11: Conclusion
